@@ -7,15 +7,8 @@ __pycache__/
 htmlcov/
 .covtmp/
 
-# 本地实验与临时文件，不属于本插件
+# 本地实验与临时文件
+*.log
+.verify/
 .probe_write.txt
 _fail_*.txt
-*.log
-.mixin_conf_test.json
-.verify/
-memtrace.py
-trace_mixin.py
-mixin_config.py
-mixins.example.json
-memory_instrumented.py
-astrbot_plugin_memtrace/

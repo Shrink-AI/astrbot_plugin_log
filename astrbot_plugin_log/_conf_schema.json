@@ -1,0 +1,107 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "启用采集",
+    "default": true
+  },
+  "data_dir": {
+    "type": "string",
+    "description": "数据根目录",
+    "default": "",
+    "hint": "留空则写入 data/plugin_data/astrbot_plugin_log/logs"
+  },
+  "max_file_mb": {
+    "type": "int",
+    "description": "单个日志文件大小上限(MB)，达到后滚动到下一个 part",
+    "default": 128
+  },
+  "collect_group": {
+    "type": "bool",
+    "description": "采集群聊",
+    "default": true
+  },
+  "collect_private": {
+    "type": "bool",
+    "description": "采集私聊",
+    "default": true
+  },
+  "collect_temp_session": {
+    "type": "bool",
+    "description": "采集群临时会话",
+    "default": true,
+    "hint": "群临时会话会单独存放在 t/ 下，不与普通私聊合并"
+  },
+  "group_whitelist": {
+    "type": "list",
+    "description": "只采集这些群号，留空表示不限",
+    "default": []
+  },
+  "group_blacklist": {
+    "type": "list",
+    "description": "不采集这些群号",
+    "default": []
+  },
+  "ignore_self": {
+    "type": "bool",
+    "description": "不记录 bot 自己发出的消息",
+    "default": false
+  },
+  "store_raw_event": {
+    "type": "bool",
+    "description": "每条记录附带适配器原始事件",
+    "default": false,
+    "hint": "开启后体积显著变大，但 schema 演进时可用于回填"
+  },
+  "timezone": {
+    "type": "string",
+    "description": "按天分片使用的时区",
+    "default": "Asia/Shanghai"
+  },
+  "download_media": {
+    "type": "bool",
+    "description": "把图片等媒体下载到本地",
+    "default": true,
+    "hint": "QQ 图片链接会过期，不下载就只能留一个很快失效的 URL"
+  },
+  "media_kinds": {
+    "type": "list",
+    "description": "需要落盘的媒体类型",
+    "default": ["image"],
+    "hint": "可选 image / record / video / file"
+  },
+  "media_max_mb": {
+    "type": "int",
+    "description": "单个媒体文件大小上限(MB)",
+    "default": 20
+  },
+  "media_timeout_s": {
+    "type": "int",
+    "description": "媒体下载超时(秒)",
+    "default": 10
+  },
+  "media_concurrency": {
+    "type": "int",
+    "description": "媒体并发下载数",
+    "default": 4
+  },
+  "queue_size": {
+    "type": "int",
+    "description": "内存缓冲队列长度，写满会丢弃并计数",
+    "default": 5000
+  },
+  "dedup_cache_size": {
+    "type": "int",
+    "description": "进程内去重缓存条数（(self_id, msg_id) 键）",
+    "default": 200000
+  },
+  "fsync_interval_s": {
+    "type": "int",
+    "description": "强制 fsync 间隔(秒)，0 表示不 fsync",
+    "default": 5
+  },
+  "log_stats_interval_s": {
+    "type": "int",
+    "description": "统计日志输出间隔(秒)，0 表示不输出",
+    "default": 300
+  }
+}

@@ -1,0 +1,12 @@
+name: astrbot_plugin_log
+display_name: 训练语料采集
+desc: 把群聊/私聊消息按会话（群号、QQ 对）与日期分片落成结构化 JSONL，图片按内容寻址保存，供后续清洗与模型训练使用。
+version: 1.0.0
+author: Shrink-AI
+repo: "https://github.com/Shrink-AI/astrbot_plugin_log"
+astrbot_version: ">=4.9.2"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 数据采集
+  - 训练语料

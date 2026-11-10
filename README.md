@@ -191,3 +191,6 @@ python -m coverage report -m
 `tests/stub/` 是一个最小 AstrBot 桩，用于在没有 AstrBot 的机器上跑通内核。
 
 > 覆盖率 100% 只说明每行都跑过，不说明线上不会出问题。真机仍需验证的两件事：aiocqhttp 适配器是否上报 `notice`（撤回）、以及一次真实的 128MB 滚动。建议上线先小范围跑一天，再用 `tools/inspect.py` 对账。
+## 许可证
+
+AGPL-3.0，见 [LICENSE](LICENSE)。

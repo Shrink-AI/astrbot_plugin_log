@@ -11,13 +11,13 @@ AstrBot 插件：把群聊 / 私聊消息按 **会话 + 天 + 大小** 分片落
 
 ## 安装
 
-把 `astrbot_plugin_log/` 整个目录放进 AstrBot 的 `data/plugins/`：
+把本仓库放进 AstrBot 的 `data/plugins/`，目录名用 `astrbot_plugin_log`：
 
 ```
 AstrBot/
   data/
     plugins/
-      astrbot_plugin_log/
+      astrbot_plugin_log/     ← 本仓库根目录
         main.py
         metadata.yaml
         _conf_schema.json

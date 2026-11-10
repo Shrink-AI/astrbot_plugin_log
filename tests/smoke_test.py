@@ -35,7 +35,7 @@ sys.path.insert(0, str(ROOT))
 import astrbot.api.message_components as Comp  # noqa: E402
 from astrbot.api.event import AstrMessageEvent  # noqa: E402
 
-PLUGIN_DIR = ROOT / "astrbot_plugin_log"
+PLUGIN_DIR = ROOT
 _pkg = type(sys)("train_log_pkg")
 _pkg.__path__ = [str(PLUGIN_DIR)]
 sys.modules["train_log_pkg"] = _pkg

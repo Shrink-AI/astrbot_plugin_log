@@ -28,7 +28,7 @@ CollectConfig = B.config.CollectConfig
 Ingestor = B.ingestor.Ingestor
 Comp = B.Comp
 
-ROOT = B.PLUGIN_DIR.parent
+ROOT = B.PLUGIN_DIR
 
 
 # ------------------------------------------------------------------ 随机事件
@@ -382,7 +382,6 @@ class ArtifactContractTests(unittest.TestCase):
         self.assertTrue(re.search(r"^version: \d+\.\d+\.\d+$", text, re.M))
         self.assertTrue(re.search(r"^astrbot_version: ", text, re.M))
         self.assertIn("aiocqhttp", text)
-        self.assertEqual(B.PLUGIN_DIR.name, "astrbot_plugin_log")
 
     def test_no_stray_files_in_plugin(self):
         names = {p.name for p in B.PLUGIN_DIR.iterdir()}

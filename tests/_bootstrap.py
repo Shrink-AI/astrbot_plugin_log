@@ -27,7 +27,7 @@ for _p in (str(HERE / "stub"), str(HERE)):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-PLUGIN_DIR = ROOT / "astrbot_plugin_log"
+PLUGIN_DIR = ROOT
 PKG = "train_log_pkg"
 
 if PKG not in sys.modules:
